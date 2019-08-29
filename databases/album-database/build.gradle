@@ -41,6 +41,7 @@ task closeTunnel {
     }
 }
 
+
 task cfMigrate(type: FlywayMigrateTask, dependsOn: openTunnel) {
     doFirst {
         extension = setupProdFlywayExtension(new FlywayExtension(), "album-database")
